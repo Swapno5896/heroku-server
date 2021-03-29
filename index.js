@@ -34,7 +34,9 @@ app.post('/addSomething',(req,res)=>{
 
 
 
-
+app.get('/',(req,res)=>{
+    res.send('This is from index')
+})
 
 
 
@@ -42,6 +44,6 @@ app.post('/addSomething',(req,res)=>{
 
 });
 
-app.listen(port, () => {
+app.listen(process.env.PORT || port, () => {
   console.log(`Example app listening at http://localhost:${port}`)
 })
